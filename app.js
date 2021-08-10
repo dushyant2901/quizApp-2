@@ -8,6 +8,8 @@ const nextQuestion = document.querySelector(".next-question");
 let quizOptions = document.querySelector(".quiz-options ul");
 
 let score = 0;
+let tickIcon =`<div class="icon tick"><i class="fas fa-check"></i></div>`
+let crossIcon =`<div class="icon cross"><i class="fas fa-times"></i></div>`
 
 startBtn.addEventListener("click", () => {
     startScreen.classList.add("inactive");
@@ -70,18 +72,24 @@ function checkAnswer(answer, index) {
     // let userAnswer= kk
     //  selectedOption(event)
     if (userAnswer == correctAnswer) {
-        console.log("yep");
+       // console.log("yep");
         score++;
-        console.log(score);
+      //  console.log(score);
         answer.classList.add("correct");
+        answer.insertAdjacentHTML("beforeend",tickIcon);
     } else {
-        console.log("nope");
-        answer.classList.add("incorrect");
+       // console.log("nope");
+       answer.classList.add("incorrect");
+       //answer.insertAdjacentHTML("beforeend",tickIcon) for not having semicolon it wAS not working
+        answer.insertAdjacentHTML("beforeend",crossIcon);
 
         (Array.from(quizOptions.children).forEach((elem) =>{
 
             if (elem.innerText == correctAnswer) {
-            elem.classList.add("correct")}}
+           elem.classList.add("correct")
+           answer.insertAdjacentHTML("beforeend",tickIcon)}}
+       
+            //elem.setAttribute("class","correct")}}
         ))
     }
 }
