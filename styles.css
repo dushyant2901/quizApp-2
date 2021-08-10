@@ -121,6 +121,20 @@ transform: translateY(-0.75rem);
     padding: 0.5rem;
     margin: 0.5rem 0;
 }
+.selected{
+   
+    background-color: rgb(224, 115, 115) !important ;
+ }
+ .disable{
+     pointer-events: none;
+ }
+ .correct{
+     background-color: greenyellow !important;
+
+ }
+ .incorrect{
+     background-color: red !important;
+ }
 
 .quiz-option{
 font-size: 1.3rem;
@@ -195,3 +209,4 @@ padding-right:1rem;
 .inactive{
     display: none;
 }
+

@@ -11,15 +11,15 @@ let questionSet=[{
 {
     question:"what is 2abcd",
     answer:"a",
-    options:["a","b","c","d"]
+    options:["ao","b","c","d"]
 },
 {
     question:"what is 3abcd",
     answer:"a",
-    options:["a","b","c","d"]
+    options:["ahh","b","c","d"]
 },
 {
     question:"what is 4abcd",
     answer:"a",
-    options:["n","b","c","d"]
+    options:["a","b","c","d"]
 }]
